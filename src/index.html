@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Main - MathonGo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="header-title">JEE Main</h1>
+                    <span class="header-subtitle">2025 - 2009 | 173 Papers | 15825 Qs</span>
+                </div>
+                <div class="header-right">
+                    <button class="theme-toggle btn btn--outline btn--sm" id="theme-toggle" aria-label="Toggle theme">
+                        <i class="ph-bold ph-sun theme-icon-light"></i>
+                        <i class="ph-bold ph-moon theme-icon-dark"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <button class="nav-item active" data-subject="physics">
+                        <i class="ph-bold ph-atom"></i>
+                        <span>Physics PYQs</span>
+                    </button>
+                    <button class="nav-item" data-subject="chemistry">
+                        <i class="ph-bold ph-flask"></i>
+                        <span>Chemistry PYQs</span>
+                    </button>
+                    <button class="nav-item" data-subject="mathematics">
+                        <i class="ph-bold ph-calculator"></i>
+                        <span>Mathematics PYQs</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2 id="current-subject-title">Physics PYQs</h2>
+                        <p class="section-subtitle">Chapter-wise Collection of Physics PYQs</p>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-section">
+                    <div class="filters-row">
+                        <div class="filter-group">
+                            <div class="dropdown" id="class-dropdown">
+                                <button class="dropdown-toggle form-control">
+                                    <span class="dropdown-label">Class</span>
+                                    <i class="ph-bold ph-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <label class="dropdown-item">
+                                        <input type="checkbox" value="11">
+                                        <span>Class 11</span>
+                                    </label>
+                                    <label class="dropdown-item">
+                                        <input type="checkbox" value="12">
+                                        <span>Class 12</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="dropdown" id="units-dropdown">
+                                <button class="dropdown-toggle form-control">
+                                    <span class="dropdown-label">Units</span>
+                                    <i class="ph-bold ph-caret-down"></i>
+                                </button>
+                                <div class="dropdown-menu" id="units-menu">
+                                    <!-- Units will be populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <button class="filter-btn" id="not-started-filter">
+                                <span>Not Started</span>
+                            </button>
+                            <button class="filter-btn" id="weak-chapters-filter">
+                                <span>Weak Chapters</span>
+                            </button>
+                            <button class="sort-btn btn btn--outline btn--sm" id="sort-btn">
+                                <i class="ph-bold ph-arrow-up sort-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Active Filters -->
+                    <div class="active-filters" id="active-filters"></div>
+                </div>
+
+                <!-- Chapter Count -->
+                <div class="chapter-count">
+                    <span id="chapter-count-text">Showing all chapters</span>
+                </div>
+
+                <!-- Chapters Grid -->
+                <div class="chapters-grid" id="chapters-grid">
+                    <!-- Chapters will be populated dynamically -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
